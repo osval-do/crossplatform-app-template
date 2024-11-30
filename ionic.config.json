@@ -1,0 +1,7 @@
+{
+  "name": "rssapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,7 +1,8 @@
 # Angular Multi-Platform Template
 
 This repository serves as a template for creating Angular applications that can target multiple platforms:
-- Web Browsers
+
+- Web Browsers (static files and Progresiva Web App support)
 - Android (using Capacitor)
 - iOS (using Capacitor)
 - Desktop (using Electron)
@@ -40,17 +41,25 @@ ng build && npx cap sync @capacitor-community/electron
 
 ```bash
 # Web
+ng serve
 
+# Android emulator
+npx cap run android
+
+# Desktop app in debug mode
+npx cap run @capacitor-community/electron
 ```
+
 
 ## Project Structure
 
 ```
 crossplatform-ng-template
-├── src/                 # Angular source files
-├── electron/            # Electron configuration
+├── src/                 # Angular source files for all platforms
+├── electron/            # Desktop configurations (electron framework)
 ├── android/             # Android platform files
 ├── ios/                 # iOS platform files
+├── public/              # PWA configurations and icons
 ├── capacitor.config.ts  # Capacitor configuration
 ├── .browserslistrc      # Configure browser support
 └── tsconfig*            # Typescript configs
